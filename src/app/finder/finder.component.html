@@ -2,23 +2,23 @@
   Please enter the range below, hit Find to see the result and Reset to clear all text fields.
 </p>
 <div style="border:2px dashed green;background:#f5f5dc;">
-    <form>
+    <form #finder = "ngForm" (ngSubmit) = "isPalindrome(finder.value)">
   Min: <input type="text"
             id="min"
-            name="Min"
+            name="min"
             size="10"
-            value="0"
+            placeholder="0"
             onFocus="if (value == this.defaultValue) value = ''"
-     />
+            ngModel/>
   &nbsp;
   <br>
   Max: <input type="text"
             id="max"
-            name="Max"
+            name="max"
             size="10"
-            value="105"
+            placeholder="105"
             onFocus="if (value == this.defaultValue) value = ''"
-     />
+            ngModel/>
   <br>
   Result:
      <input type="text"
@@ -28,10 +28,9 @@
             size="20"
      />
   <br>
-  <input type="button"
-         value="Find"
-         onclick=""
-     />
+  <!-- <button class="find"
+          (click)="findPalindrome(min, max)">Find</button> -->
+          <input type = "submit" value = "Find">
   <input type="reset" value="Reset">
   </form>
   </div>
