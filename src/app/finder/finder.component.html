@@ -1,0 +1,40 @@
+<p>
+  Please enter the range below, hit Find to see the result and Reset to clear all text fields.
+</p>
+<div style="border:2px dashed green;background:#f5f5dc;">
+    <form>
+  Min: <input type="text"
+            id="min"
+            name="Min"
+            size="10"
+            value="0"
+            onFocus="if (value == this.defaultValue) value = ''"
+     />
+  &nbsp;
+  <br>
+  Max: <input type="text"
+            id="max"
+            name="Max"
+            size="10"
+            value="105"
+            onFocus="if (value == this.defaultValue) value = ''"
+     />
+  <br>
+  Result:
+     <input type="text"
+            id="result"
+            name="Result"
+            readonly
+            size="20"
+     />
+  <br>
+  <input type="button"
+         value="Find"
+         onclick=""
+     />
+  <input type="reset" value="Reset">
+  </form>
+  </div>
+<nav>
+    <a routerLink="/intro">Back</a>
+</nav>  
