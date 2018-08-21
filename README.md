@@ -1,27 +1,15 @@
 # PalindromeFinder
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
+This project was made for a coding challenge as part of a company interview process. It was built with NodeJs/npm
+8 and Angular 6.
 
-## Development server
+## How to run
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This guide assumes you already have NodeJS and npm installed on your machine, if you don't go download those
+first.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Clone the GitHub repo to a local directory
+* Use the Terminal to navigate to the local directory where you cloned the repo to
+* Install Angular: Run `npm install -g @angular/cli`
+* Run `npm install`
+* Run `ng serve -o`, it will automatically open your browser and point you to the start page
