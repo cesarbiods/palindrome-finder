@@ -12,8 +12,8 @@ export class FinderComponent implements OnInit {
 
   constructor(fb: FormBuilder) {
     this.form = fb.group({
-      'min' : [null],
-      'max' : [null],
+      'min' : [0],
+      'max' : [105],
       'result' : [null],
     });
    }
@@ -39,7 +39,8 @@ export class FinderComponent implements OnInit {
   findPalindrome(data) {
     const min = data.min;
     let max = data.max;
-    if (max === min) {
+    // tslint:disable-next-line:triple-equals
+    if (max == min) {
       if (this.isPalindrome(max)) {
         this.form.patchValue({result: String(max)});
         return;
@@ -48,7 +49,8 @@ export class FinderComponent implements OnInit {
         return;
       }
     }
-    while (max !== min) {
+    // tslint:disable-next-line:triple-equals
+    while (max != (min - 1)) {
       if (this.isPalindrome(max)) {
         this.form.patchValue({result: String(max)});
         return;
