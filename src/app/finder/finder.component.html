@@ -1,32 +1,45 @@
 <p>
   Please enter the range below, hit Find to see the result and Reset to clear all text fields.
 </p>
-<div style="border:2px dashed green;background:#f5f5dc;">
+<div class="container">
     <form [formGroup]="form">
-  Min: <input type="text"
-            id="min"
-            size="10"
-            onFocus="if (value == this.defaultValue) value = ''"
-            formControlName="min"/>
-  &nbsp;
-  <br>
-  Max: <input type="text"
-            id="max"
-            size="10"
-            onFocus="if (value == this.defaultValue) value = ''"
-            formControlName="max"/>
-  <br>
-  Result:
-     <input type="text"
-            id="result"
-            readonly
-            size="20"
-            formControlName="result"/>
-  <br>
-      <button (click)="findPalindrome(form.value)">Submit</button>
-      <button (click)="reset()">Reset</button>
+        <div class="form-group row">
+            <div class="col-xs-2">
+                Min: <input type="text"
+                id="min"
+                size="10"
+                class="form-control"
+                onFocus="if (value == this.defaultValue) value = ''"
+                formControlName="min"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-2">
+                Max: <input type="text"
+                id="max"
+                class="form-control"
+                size="10"
+                onFocus="if (value == this.defaultValue) value = ''"
+                formControlName="max"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-2">
+                Result: <input type="text"
+                id="result"
+                readonly
+                class="form-control"
+                size="10"
+                formControlName="result"/>
+            </div>
+        </div>
+        <br>
+        <button (click)="findPalindrome(form.value)" class="btn btn-primary">Find</button>
+        &nbsp;
+        <button (click)="reset()" class="btn btn-success">Reset</button>
   </form>
-  </div>
+</div>
+&nbsp;
 <nav>
     <a routerLink="/intro">Back</a>
 </nav>  
